@@ -37,7 +37,7 @@ public class DBFrame extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
         jToggleButton3 = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        cleanButton = new javax.swing.JButton();
         tablesLabel = new javax.swing.JLabel();
         columnsLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -115,11 +115,11 @@ public class DBFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
-        jButton1.setText("Borrar Selección");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cleanButton.setFont(new java.awt.Font("Ubuntu", 0, 12)); // NOI18N
+        cleanButton.setText("Borrar Selección");
+        cleanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cleanButtonActionPerformed(evt);
             }
         });
 
@@ -130,7 +130,7 @@ public class DBFrame extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(configPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cleanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         configPanelLayout.setVerticalGroup(
@@ -139,7 +139,7 @@ public class DBFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(cleanButton)
                 .addContainerGap())
         );
 
@@ -270,7 +270,7 @@ public class DBFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tablesListValueChanged
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanButtonActionPerformed
         for (String table : tablesList.getSelectedValuesList()) {
             for (Object element : columnsListModel.toArray()) {
                 String column = (String)element;
@@ -282,15 +282,15 @@ public class DBFrame extends javax.swing.JFrame {
         }
         
         tablesList.clearSelection();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cleanButtonActionPerformed
 
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cleanButton;
     private javax.swing.JLabel columnsLabel;
     private javax.swing.JList<String> columnsList;
     private javax.swing.JPanel configPanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
