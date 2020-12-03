@@ -34,9 +34,9 @@ public class DBFrame extends javax.swing.JFrame {
         columnsList = new javax.swing.JList<>();
         configPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jToggleButton3 = new javax.swing.JToggleButton();
+        simpleSelectionTButton = new javax.swing.JToggleButton();
+        intervalSelectionTButton = new javax.swing.JToggleButton();
+        multipleSelectTButton = new javax.swing.JToggleButton();
         cleanButton = new javax.swing.JButton();
         tablesLabel = new javax.swing.JLabel();
         columnsLabel = new javax.swing.JLabel();
@@ -66,28 +66,28 @@ public class DBFrame extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Modo de Selección"));
 
-        selectionGroup.add(jToggleButton1);
-        jToggleButton1.setSelected(true);
-        jToggleButton1.setText("Simple");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        selectionGroup.add(simpleSelectionTButton);
+        simpleSelectionTButton.setSelected(true);
+        simpleSelectionTButton.setText("Simple");
+        simpleSelectionTButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                simpleSelectionTButtonActionPerformed(evt);
             }
         });
 
-        selectionGroup.add(jToggleButton2);
-        jToggleButton2.setText("Intervalo");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        selectionGroup.add(intervalSelectionTButton);
+        intervalSelectionTButton.setText("Intervalo");
+        intervalSelectionTButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                intervalSelectionTButtonActionPerformed(evt);
             }
         });
 
-        selectionGroup.add(jToggleButton3);
-        jToggleButton3.setText("Múltiple");
-        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+        selectionGroup.add(multipleSelectTButton);
+        multipleSelectTButton.setText("Múltiple");
+        multipleSelectTButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton3ActionPerformed(evt);
+                multipleSelectTButtonActionPerformed(evt);
             }
         });
 
@@ -97,11 +97,11 @@ public class DBFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(simpleSelectionTButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                .addComponent(intervalSelectionTButton, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(multipleSelectTButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -109,9 +109,9 @@ public class DBFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2)
-                    .addComponent(jToggleButton3))
+                    .addComponent(simpleSelectionTButton)
+                    .addComponent(intervalSelectionTButton)
+                    .addComponent(multipleSelectTButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -231,17 +231,17 @@ public class DBFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowClosing
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void simpleSelectionTButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpleSelectionTButtonActionPerformed
         tablesList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_simpleSelectionTButtonActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void intervalSelectionTButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intervalSelectionTButtonActionPerformed
         tablesList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_intervalSelectionTButtonActionPerformed
 
-    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+    private void multipleSelectTButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multipleSelectTButtonActionPerformed
         tablesList.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-    }//GEN-LAST:event_jToggleButton3ActionPerformed
+    }//GEN-LAST:event_multipleSelectTButtonActionPerformed
 
     private void tablesListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_tablesListValueChanged
         //Condición para evitar que se produzcan dobles eventos(como los del ratón) 
@@ -291,16 +291,16 @@ public class DBFrame extends javax.swing.JFrame {
     private javax.swing.JLabel columnsLabel;
     private javax.swing.JList<String> columnsList;
     private javax.swing.JPanel configPanel;
+    private javax.swing.JToggleButton intervalSelectionTButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JToggleButton multipleSelectTButton;
     private javax.swing.ButtonGroup selectionGroup;
+    private javax.swing.JToggleButton simpleSelectionTButton;
     private javax.swing.JLabel tablesLabel;
     private javax.swing.JList<String> tablesList;
     // End of variables declaration//GEN-END:variables
